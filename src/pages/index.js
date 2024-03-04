@@ -47,10 +47,10 @@ export default function Home() {
         <Layout
             title={`${siteConfig.title}`}
             description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
+          <HomepageHeader />
+          <main>
+            <HomepageFeatures />
+          </main>
+        </Layout>
   );
 }
