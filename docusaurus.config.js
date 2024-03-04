@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Kotlitecture',
+  title: 'Kotli',
   tagline: 'Set of Kotlin-centric solutions helping write production-ready high-performance native apps and backend services for time-to-market sensitive products.',
   favicon: 'img/favicon.ico',
 
@@ -38,25 +38,20 @@ const config = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
-      }),
+      },
     ],
   ],
 
@@ -64,16 +59,16 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Kotlitecture',
+        title: 'Kotli',
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/kotlitecture',
@@ -82,47 +77,46 @@ const config = {
           },
         ],
       },
-      footer: {
-          style: 'light',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.com/invite/NmgfSXABBn',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/kotlitecture',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/kotlitecture',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Kotlitecture. Built with Docusaurus.`,
-      },
+      // footer: {
+      //     style: 'light',
+      //   links: [
+      //     {
+      //       title: 'Docs',
+      //       items: [
+      //         {
+      //           label: 'Tutorial',
+      //           to: '/docs/intro',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'Community',
+      //       items: [
+      //         {
+      //           label: 'Discord',
+      //           href: 'https://discord.com/invite/NmgfSXABBn',
+      //         },
+      //         {
+      //           label: 'Twitter',
+      //           href: 'https://twitter.com/kotlitecture',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'More',
+      //       items: [
+      //         // {
+      //         //   label: 'Blog',
+      //         //   to: '/blog',
+      //         // },
+      //         {
+      //           label: 'GitHub',
+      //           href: 'https://github.com/kotlitecture',
+      //         },
+      //       ],
+      //     },
+      //   ]
+      // },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
