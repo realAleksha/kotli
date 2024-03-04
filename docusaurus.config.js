@@ -67,10 +67,6 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Kotlitecture',
-        logo: {
-          alt: 'Kotlitecture Logo',
-          src: 'img/logo.png',
-        },
         items: [
           {
             type: 'docSidebar',
