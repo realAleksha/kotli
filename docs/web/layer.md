@@ -8,13 +8,13 @@ title: Layer
 When a layer is added to a project, you can either remove it or extend it with features using the **Layer Sheet**.
 The sheet includes the following elements:
 
-### Template Card
+### Template
 
 Each layer is built on a specific template. This card displays information about the template underlying the layer.
 
 // screenshot
 
-### Remove Action
+### Remove
 
 Layer can be easily removed from the project by clicking on this button.
 
@@ -24,7 +24,7 @@ This action is performed without confirmation.
 
 // screenshot
 
-### Feature Tabs
+### Features
 
 Depending on the chosen template, the layer can offer various features.
 These features are logically grouped to enhance the understanding of both functional and non-functional layer requirements.
@@ -38,7 +38,7 @@ Behaviour:
 
 // screenshot
 
-### Search Features
+### Search
 
 For convenience, it is possible to search for required features using one or more keywords (comma-separated).
 When the search field has any value, all found features are displayed in a single list, preserving the natural order.

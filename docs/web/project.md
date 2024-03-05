@@ -13,7 +13,7 @@ Upon opening the web portal, you are presented with a **Project Screen**.
 
 The **Project Screen** consists of the following elements:
 
-### 1. Project Name
+### 1. Name
 
 An input field for entering the project name.
 This field is optional and is used solely to identify the created project.
@@ -22,14 +22,14 @@ When a project name is provided, its value is utilized as:
 - the name of the downloaded archive containing the output project structure;
 - the title of the HTTP link associated with this project;
 
-### 2. Action Bar
+### 2. Actions
 
 Actions that can be performed for the given project.
 
 The primary action is to **Download** the project, and it is enabled only when the project contains at least one layer.
 Additional actions are accessible under the **more** option.
 
-### 3. Layers Panel
+### 3. Layers
 
 All created layers for the given project are displayed in this panel as cards with basic information.
 
