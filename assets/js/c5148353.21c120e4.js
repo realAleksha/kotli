@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkotli_docs=self.webpackChunkkotli_docs||[]).push([[31],{6107:e=>{e.exports=JSON.parse('{"title":"Web Portal","description":"Web portal","slug":"/category/web-portal","permalink":"/category/web-portal","navigation":{"previous":{"title":"How to use","permalink":"/"},"next":{"title":"Project","permalink":"/web/project"}}}')}}]);
