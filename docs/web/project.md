@@ -9,7 +9,7 @@ Even if it only comprises an iOS or Android app, it still falls under the defini
 
 Upon opening the web portal, you are presented with a **Project Screen**.
 
-![Project](img/project_light.png#gh-light-mode-only)![Project](img/project_dark.png#gh-dark-mode-only)
+![Project Screen](img/project_light.png#gh-light-mode-only)![Project Screen](img/project_dark.png#gh-dark-mode-only)
 
 The **Project Screen** consists of the following elements:
 
