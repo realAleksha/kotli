@@ -6,7 +6,7 @@ title: How to use
 Kotli project template generator can be utilized in various ways:
 
 ## Web Portal
-Our web solution allows users to build the desired project architecture and download the resulting source codes through a browser.
+Browser-based solution allows users to build the desired project architecture and download the resulting source codes.
 It is extremely user-friendly and does not require deep technical expertise.
 
 :::note
@@ -15,7 +15,7 @@ All these templates are publicly available on GitHub and are regularly updated w
 :::
 
 ## Engine
-Our technical solution facilitates the generation of output structures based on existing templates and the creation of new ones using the provided framework.
+Kotlin library that facilitates the generation of output structures based on existing templates and the creation of new ones using the provided framework.
 
 :::info
 There are no limitations on using any template with this way. The only requirement is that you need to write some code to do it 💀.
