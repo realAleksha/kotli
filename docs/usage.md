@@ -20,7 +20,3 @@ Kotlin library that facilitates the generation of output structures based on exi
 :::info
 There are no limitations on using any template with this way. The only requirement is that you need to write some code to do it 💀.
 :::
-
-## REST API
-
-// TBA

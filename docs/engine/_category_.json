@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Engine"
+    "description": "Everything you need to know to understand the architecture of the engine and start using it on your own, either with existing templates or by creating new ones."
   }
 }

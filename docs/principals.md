@@ -18,7 +18,7 @@ The architecture of any product represents a compromise between quality and the 
 
 ## Learn while coding
 
-In product development, teams typically consist of specialists collaborating: DevOps engineers, frontend and backend developers, manual and automated testers, architects, etc. It’s advantageous when the team truly includes all these specialists, or at least some possess experience across various areas, ensuring coverage of all necessary technical skills to maintain the product’s quality during implantation.
+In product development, teams typically consist of specialists collaborating: DevOps engineers, frontend and backend developers, manual and automated testers, architects, etc. It’s advantageous when the team truly includes all these specialists, or at least some possess experience across various areas, ensuring coverage of all necessary technical skills to maintain the product’s quality during implementation.
 
 :::tip[&nbsp;]
 **Kotli** can provide not only everything your team needs to cover the entire development lifecycle but also ready-to-use technical solutions and step-by-step instructions on how to configure each practice and how to use it. As a result, developers can begin using production-ready practices with a lower entry threshold and gain knowledge of why and how these practices work throughout the process.
