@@ -33,8 +33,6 @@ Behaviour:
 - To add or remove a feature from the layer, just click on it.
 - To display its details, click on the `three dots menu` when the cursor is over the feature.
 
-// screenshot
-
 ### 4. Search
 
 For convenience, it is possible to search for required features using one or more keywords (comma-separated).
