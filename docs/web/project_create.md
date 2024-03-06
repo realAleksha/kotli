@@ -5,7 +5,7 @@ title: Create project
 
 To create a new project:
 
-1. Open Kotli.
+1. Open Kotli (https://kotlitecture.com/project).
 2. Add the layers you want to include in the project.
 3. For each added layer, edit `name` and `namespace` if necessary.
 4. For each added layer, include features if necessary.
