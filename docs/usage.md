@@ -3,7 +3,7 @@ sidebar_position: 2
 title: How to use
 ---
 
-Kotli project template generator can be utilized in various ways:
+**Kotli** can be utilized in various ways:
 
 ## Web Portal
 Browser-based solution allows users to build the desired project architecture and download the resulting source codes.
