@@ -35,6 +35,6 @@ Behaviour:
 
 ### 4. Search
 
-For convenience, it is possible to search for required features using one or more keywords (comma-separated).
+It is possible to search for required features using one or more keywords (comma-separated).
 When the search field has any value, all found features are displayed in a single list, preserving the natural order.
 The search can be performed using any text of the feature (title, description, etc.).

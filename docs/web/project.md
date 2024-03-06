@@ -44,7 +44,7 @@ Behavior:
 ### 4. Selected Layer
 
 When a layer is selected, the `Project Screen` displays its details.
-Here, you can edit the layer's name and namespace, add or remove features, and delete the layer from the project if necessary.
+Here, you can edit the layer's `name` and `namespace`, add or remove features, and delete the layer from the project if necessary.
 Depending on the chosen template, the layer displays logical groups for adding features.
 These groups form the architecture of the layer.
 
