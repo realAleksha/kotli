@@ -7,11 +7,11 @@ In terms of **Kotli**, a project is essentially the project you are building.
 Whether it includes mobile apps, a website, or backend services, it qualifies as a project.
 Even if it only comprises an iOS or Android app, it still falls under the definition of a project.
 
-Upon opening the web portal, you are presented with a **Project Screen**.
+Upon opening the web portal, you are presented with a `Project Screen`.
 
 ![Project Screen](img/project_light.png#gh-light-mode-only)![Project Screen](img/project_dark.png#gh-dark-mode-only)
 
-The **Project Screen** consists of the following elements:
+The `Project Screen` consists of the following elements:
 
 ### 1. Name
 
@@ -26,8 +26,8 @@ When a project name is provided, its value is utilized as:
 
 Actions that can be performed for the given project.
 
-The primary action is to **Download** the project, and it is enabled only when the project contains at least one layer.
-Additional actions are accessible under the **more** option.
+The primary action is to `Download` the project, and it is enabled only when the project contains at least one layer.
+Additional actions are accessible under the `more` option.
 
 ### 3. Layers
 
@@ -43,7 +43,7 @@ Behavior:
 
 ### 4. Selected Layer
 
-When a layer is selected, the **Project Screen** displays its details.
+When a layer is selected, the `Project Screen` displays its details.
 Here, you can edit the layer's name and namespace, add or remove features, and delete the layer from the project if necessary.
 Depending on the chosen template, the layer displays logical groups for adding features.
 These groups form the architecture of the layer.
