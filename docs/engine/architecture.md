@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Technical guide
+title: Architecture
 ---
 
 The template generation process involves creating output structures based on a specified layer and associated features.
@@ -125,13 +125,11 @@ and it is possible to create new ones with any logic to operate with template ge
 ## TemplateGenerator
 
 The template generator is utilized to generate the necessary output structure, such as a File, Zip, Database, etc.
-It depends on both the `Layer` and `FeatureProcessor`.
 Usually, there's no need to create other implementations of this class.
 However, the solution is designed to be flexible, allowing the creation of any other type of output structure if necessary.
 
 ```mermaid
 graph TD
-   class Layer abstract
    class TemplateRegistry abstract
    subgraph TemplateGenerator
        direction TB
@@ -142,18 +140,16 @@ graph TD
        TemplateContext --> TPN
    end
 
-   Layer --> TemplateGenerator
    TemplateRegistry --> TemplateGenerator
 ```
 
 The high level relationships:
-1. **Layer**: Represents layer information used in template generation.
-2. **TemplateRegistry**: Provides `TemplateGenerator` with all required template processors.
-3. **TemplateGenerator**: Responsible for producing an output stream from passed metadata. It is associated with:
+1. **TemplateRegistry**: Provides `TemplateGenerator` with all required template processors.
+2. **TemplateGenerator**: Responsible for producing an output stream from passed metadata. It is associated with:
     - Creation of a `TemplateContext` from the passed `Layer`.
     - Processing metadata using set of required `TemplateProcessor`.
-4. **TemplateContext**: Represents the execution context for a template.
-5. **TemplateProcessor**: Responsible for processing templates.
+3. **TemplateContext**: Represents the execution context for a template.
+4. **TemplateProcessor**: Responsible for processing templates.
 
 In general, the whole template generation flow looks like this:
 
@@ -190,8 +186,8 @@ It utilizes the provided TemplateRegistry to access template processors.
 classDiagram
    class PathOutputGenerator {
       +PathOutputGenerator(output: Path, registry: TemplateRegistry)
-      -registry: TemplateRegistry
       -output: Path
+      -registry: TemplateRegistry
    }
 ```
 
