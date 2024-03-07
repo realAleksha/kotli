@@ -5,17 +5,17 @@ title: Template Structure
 
 Each **Kotli Template** is a self-contained Kotlin artifact that encompasses all the necessary metadata for presentation and facilitates the multistep process of generating an output structure.
 
+It comprises `Template` and `Processor`.
+
 ```mermaid
 graph TD
    P[Processor]
    T[Template]
    KT[Kotli Template]
    
-   P --> KT
    T --> KT
+   P --> KT
 ```
-
-It comprises `Template` and `Processor`
 
 ## Template
 
