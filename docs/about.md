@@ -16,12 +16,30 @@ The architecture of any product represents a compromise between quality and the 
 **Kotli** leverages the best software development practices to generate an initial project structure of any complexity while prioritizing simplicity and efficiency in further development and project support phases. As a result, at the beginning of the development, you have ready-to-use project structures and workflows with no cost.
 :::
 
+## Write less, automate more
+
+When starting a project from scratch, typical steps involve:
+1. designing the product's architecture
+2. setting up the initial project structure
+3. configuring deployment
+4. implementing patterns for recurring scenarios
+5. writing tests
+
+:::tip[&nbsp;]
+Kotli aims to streamline this process by generating code based on the planned architecture.
+The less code is written, the fewer issues it has... but it is not certain.
+:::
+
+:::info[&nbsp;]
+There's also potential for training an AI to auto-generate code for specific business situations.
+:::
+
 ## Learn while coding
 
 In product development, teams typically consist of specialists collaborating: DevOps engineers, frontend and backend developers, manual and automated testers, architects, etc. It’s advantageous when the team truly includes all these specialists, or at least some possess experience across various areas, ensuring coverage of all necessary technical skills to maintain the product’s quality during implementation.
 
 :::tip[&nbsp;]
-**Kotli** can provide not only everything your team needs to cover the entire development lifecycle but also ready-to-use technical solutions and step-by-step instructions on how to configure each practice and how to use it. As a result, developers can begin using production-ready practices with a lower entry threshold and gain knowledge of why and how these practices work throughout the process.
+**Kotli** can provide ready-to-use technical solutions and step-by-step instructions on how to use them. As a result, developers can begin using production-ready practices with a lower entry threshold and gain knowledge of why and how these practices work throughout the process.
 :::
 
 ## Kotlin first
