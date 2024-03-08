@@ -225,8 +225,10 @@ This implementation consumes the output structure and proceeds with the executio
 treating the generated structure as a Gradle project. It executes a given set of commands as arguments for the gradlew command.
 The generation process will only be considered complete after the successful execution of the provided Gradle commands.
 
+:::warning[&nbsp;]
 Keep in mind that the provided generator should produce a file structure on physical storage,
 ensuring that commands can be executed properly.
+:::
 
 ```mermaid
 classDiagram
