@@ -75,36 +75,46 @@ graph TD
    class TemplateProcessor abstract
    class FeatureProcessor abstract
    class FeatureProvider abstract
-   class TemplateContext abstract
+   Layer
+   TG["Template Generator"]
+   TS["TemplateContext"]
+   OS["Output Structure"]
    subgraph TemplateProcessor
-       direction TB
-       FP1["Feature Provider 1"]
-       FPN["Feature Provider N"]
-       P1["Feature Processor 1"]
-       P2["Feature Processor 2"]
-       P3["Feature Processor 3"]
-       PN["Feature Processor N"]
-       R1["Rule 1"]
-       R2["Rule 2"]
-       R3["Rule 3"]
-       R4["Rule 4"]
-       R5["Rule 5"]
-       R6["Rule 6"]
-       RN["Rule N"]
-       FP1 --> P1
-       FP1 --> P2
-       FPN --> P3
-       FPN --> PN
-       P1 --> R1
-       P1 --> R2
-       P2 --> R3
-       P3 --> R4
-       PN --> R5
-       PN --> R6
-       PN --> RN
+      direction TB
+      FP1["Feature Provider 1"]
+      FPN["Feature Provider N"]
+      P1["Feature Processor 1"]
+      P2["Feature Processor 2"]
+      PN["Feature Processor N"]
+      R1["Rule 1"]
+      R2["Rule 2"]
+      R3["Rule 3"]
+      R4["Rule 4"]
+      R5["Rule 5"]
+      R6["Rule 6"]
+      RN["Rule N"]
+      FP1 --> P1
+      FP1 --> P2
+      FPN --> PN
+      P1 --> R1
+      P1 --> R2
+      P2 --> R3
+      P2 --> R4
+      PN --> R5
+      PN --> R6
+      PN --> RN
+      R1 --> |apply|TS
+      R2 --> |apply|TS
+      R3 --> |apply|TS
+      R4 --> |apply|TS
+      R5 --> |apply|TS
+      R6 --> |apply|TS
+      RN --> |apply|TS
    end
 
-   TemplateContext --> TemplateProcessor
+   Layer --> TemplateProcessor
+   TS --> TG
+   TG --> OS
 ```
 
 The high level relationships:
@@ -131,16 +141,21 @@ However, the solution is designed to be flexible, allowing the creation of any o
 ```mermaid
 graph TD
    class TemplateRegistry abstract
+   TC1["Template Context 1"]
+   TCN["Template Context N"]
+   OS["Output Structure"]
    subgraph TemplateGenerator
        direction TB
-       TemplateContext
        TP1["Template Processor 1"]
        TPN["Template Processor N"]
        TemplateContext --> TP1
        TemplateContext --> TPN
+       TP1 --> TC1
+       TPN --> TCN
    end
 
    TemplateRegistry --> TemplateGenerator
+   TemplateGenerator --> OS
 ```
 
 The high level relationships:
