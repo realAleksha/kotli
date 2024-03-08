@@ -18,7 +18,7 @@ All these templates are publicly available on GitHub and are regularly updated w
 The web portal does not implement any specific logic for each `Kotli Template`.
 Instead, it relies solely on the metadata extracted from them.
 This means that technically, it is possible to use any template distributed as a Java artifact.
-::
+:::
 
 ## Engine
 Kotlin library that facilitates the generation of output structures based on existing templates and the creation of new ones using the provided framework.

@@ -255,10 +255,10 @@ class CleanupMarkedLine(
 }
 ```
 
-Each `file rule` requires implementing only one method, `doApply`. This method is called during the final stage of the generation phase.
+Each file rule requires implementing only one method, `doApply`. This method is called during the final stage of the generation phase.
 
 :::tip[&nbsp;]
-FileRule is not bound to a file it modifies.
+**File Rule** is not bound to a file it modifies.
 :::
 
 :::info[&nbsp;]
