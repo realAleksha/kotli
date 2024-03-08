@@ -257,21 +257,21 @@ class CleanupMarkedLine(
 
 Each `file rule` requires implementing only one method, `doApply`. This method is called during the final stage of the generation phase.
 
-:::tip
+:::tip[&nbsp;]
 FileRule is not bound to a file it modifies.
 :::
 
-:::info
+:::info[&nbsp;]
 It is possible to implement any rule with any underlying template engine to process the input file.
 :::
 
-:::warning
+:::warning[&nbsp;]
 The engine allows applying different rules to the same file. In such cases, each subsequent rule will operate with the modified version of the file.
 :::
 
 ## Examples
 
-Before delving deep into the details, it is recommended to check how existing templates look. Here are some examples:
+It is recommended to check how existing templates look for a better understanding of the engine concept. Here are some examples:
 
 1. Android Compose Application - https://github.com/kotlitecture/template-android-compose
 2. Spring Boot Application - https://github.com/kotlitecture/template-backend-spring-boot 
