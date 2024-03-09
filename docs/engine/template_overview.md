@@ -23,7 +23,7 @@ It serves as the initial blueprint for a project template structure without any 
 The structure can be written in any language, and technically, it doesn't even have to be a "project".
 The crucial aspect is that this template is utilized by the `Processor` to generate the resulting structure.
 
-:::tip
+:::tip[&nbsp;]
 It is recommended for this structure to be a functional example of a project, importable into an IDE as-is for testing and modification purposes.
 :::
 
@@ -106,7 +106,7 @@ class AndroidComposeTemplateProcessor : BaseTemplateProcessor() {
         ...
     }
     
-    override fun prepare(state: TemplateState) {
+    override fun processBefore(state: TemplateState) {
         state.onApplyRules(
             "app/build.gradle",
             ReplaceMarkedText(
@@ -128,7 +128,7 @@ Each implementation is responsible for overriding the given methods:
 - `getType()` - Clarifies the type of the template and is used for a better understanding of its purpose.
 - `getWebUrl()` - Mostly an URL to the repository with the source codes of the template implementation. Although it's not required to link source codes, we prioritize open-source and its collaborative possibilities.
 - `createProviders()` - This is the main method. It registers all providers responsible for manipulating the blueprint template to form the required output architecture.
-- `prepare()` - Used to apply some `rules` to the output structure before it is delegated to providers.
+- `processBefore()` - Used to apply some `rules` to the output structure before it is delegated to providers.
 
 ### 2. Feature Provider
 
@@ -138,7 +138,7 @@ Examples:
 - Your project requires the use of analytics events, and you want to log such events into one or multiple different services (Google Analytics, Amplitude, AppsFlyer).
 - Your project requires publication in different distribution channels (Maven, Google Artifact Registry, AWS CodeArtifact, etc.).
 
-In both scenarios, you can use either one or multiple services (`processors`). Depending on the scenario, you will get all the required technical solutions to either log events into two systems using one common method or deploy artifacts into one or multiple systems using one generated pipeline.
+In both scenarios, you can use either one or multiple services (`processors`). Depending on the scenario, you will get all the required technical solutions to either log events into multiple systems using one common method or deploy artifacts into several destinations using one generated pipeline.
 
 :::tip[&nbsp;]
 Feature Provider is responsible to group multiple similar services, present them to the user, and generate all required artifacts, making it possible to operate with the services as one.

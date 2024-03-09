@@ -17,7 +17,7 @@ Each layer is built on a specific template. This card displays information about
 
 Layer can be easily removed from the project by clicking on this button.
 
-:::warning
+:::warning[&nbsp;]
 This action is performed without confirmation.
 :::
 

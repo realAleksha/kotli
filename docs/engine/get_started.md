@@ -13,7 +13,7 @@ dependencyResolutionManagement {
 }
 ```
 
-:::info
+:::info[&nbsp;]
 Later, all libraries can be migrated to the Maven Central repository, making this step obsolete.
 :::
 

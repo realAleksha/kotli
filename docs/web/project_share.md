@@ -8,6 +8,6 @@ Such a link can be shared with anyone for the possibility to view or use your pr
 However, if you or anyone else navigates to such a link and modifies its underlying structure,
 it will lead to the creation of a new project and a new public link.
 
-:::info
+:::info[&nbsp;]
 It means that the project under the link is immutable once the creator's HTTP session expires or if the browser page with the link is reloaded.
 :::

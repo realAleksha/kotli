@@ -17,7 +17,7 @@ The sheet includes the following elements:
 
 A feature can be either added or removed from the current layer depending on its current state.
 
-:::warning
+:::warning[&nbsp;]
 This action is performed without confirmation.
 :::
 
@@ -33,6 +33,6 @@ If the underlying functionality has any official resources, you can access HTTP 
 
 This block provides a brief understanding of the functionality and its specifics. 
 
-:::info
+:::info[&nbsp;]
 Before you include the feature, it is recommended to read this information.
 :::
