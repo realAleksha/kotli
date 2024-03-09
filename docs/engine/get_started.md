@@ -35,36 +35,36 @@ dependencies {
 Once done, verify that dependencies are available in the classpath and can be used to generate templates.
 
 ```kotlin
-    // Init registry
-    val androidProcessor = AndroidComposeTemplateProcessor() // android application template processor
-    val backendProcessor = SpringBootTemplateProcessor() // backend spring boot template processor
-    val templateRegistry = DefaultTemplateRegistry(androidProcessor, backendProcessor)
-    
-    // Define generator
-    val templateGenerator = PathOutputGenerator(
-        output = File("my-templates").toPath().toAbsolutePath(),    
-        registry = templateRegistry,
+// Init registry
+val androidProcessor = AndroidComposeTemplateProcessor() // android application template processor
+val backendProcessor = SpringBootTemplateProcessor() // backend spring boot template processor
+val templateRegistry = DefaultTemplateRegistry(androidProcessor, backendProcessor)
+
+// Define generator
+val templateGenerator = PathOutputGenerator(
+    output = File("my-templates").toPath().toAbsolutePath(),
+    registry = templateRegistry,
+)
+
+// Generate android application template
+templateGenerator.generate(
+    Layer(
+        processorId = androidProcessor.getId(),
+        namespace = "my.app.android",
+        name = "my-android-app",
+        features = listOf()
     )
-    
-    // Generate android application template
-    templateGenerator.generate(
-        Layer(
-            processorId = androidProcessor.getId(),
-            namespace = "my.app.android",
-            name = "my-android-app",
-            features = listOf()
-        )
+)
+
+// Generate backend spring boot template
+templateGenerator.generate(
+    Layer(
+        processorId = backendProcessor.getId(),
+        namespace = "my.app.backend",
+        name = "my-backend-app",
+        features = listOf()
     )
-    
-    // Generate backend spring boot template
-    templateGenerator.generate(
-        Layer(
-            processorId = backendProcessor.getId(),
-            namespace = "my.app.backend",
-            name = "my-backend-app",
-            features = listOf()
-        )
-    )
-    
-    // Check that the templates are generated under the root folder named `my-templates`
+)
+
+// Check that the templates are generated under the root folder named `my-templates`
 ```
