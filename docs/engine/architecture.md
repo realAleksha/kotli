@@ -148,8 +148,6 @@ graph TD
        direction TB
        TP1["Template Processor 1"]
        TPN["Template Processor N"]
-       TemplateContext --> TP1
-       TemplateContext --> TPN
        TP1 --> TC1
        TPN --> TCN
    end
