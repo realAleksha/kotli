@@ -70,5 +70,5 @@ Project architecture usually comprises a set of technical solutions combined to 
 All the benefits mentioned for Kotli are valuable and can significantly aid in building better apps faster. However, it’s important to note that while the technical solutions, practices, and ready-to-use templates provided by Kotli are beneficial, they are not a silver bullet and should be open to consideration for change or alternative solutions.
 
 :::tip[&nbsp;]
-**Kotli** is designed to be flexible and to accommodate the implementation of alternative solutions to approach the same problem differently. Therefore, open source serves as a gateway, and community discussion is key to fostering innovation and adaptation.
+**Kotli** is designed to be flexible and to accommodate the implementation of alternative solutions to approach the same problem differently. Therefore, open source serves as a gateway, and community is key for expansion and improvements.
 :::
