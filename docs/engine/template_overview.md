@@ -38,8 +38,6 @@ The `Processor` serves two goals:
 
 Let's take a look at some existing `processors` for a better understanding of the whole mechanics.
 
-Any external usage of the `Kotli Template` occurs through its processor only.
-
 ```mermaid
 graph TD
    class TemplateProcessor abstract
@@ -87,7 +85,9 @@ graph TD
     TG --> OS
 ```
 
-### 1. Template Processor
+### 1. TemplateProcessor
+
+Any external usage of the `Kotli Template` occurs through its processor only.
 
 A typical processor is an implementation of the `BaseFeatureProcessor` class.
 
@@ -118,6 +118,14 @@ class AndroidComposeTemplateProcessor : BaseTemplateProcessor() {
         )
         ...
     }
+    
+    override fun processAfter(state: TemplateState) {
+        state.onApplyRules(
+            "app/src/main/kotlin",
+            RenamePackage("app", state.layer.namespace)
+        )
+        ...
+    }
 
 }
 ```
@@ -129,8 +137,9 @@ Each implementation is responsible for overriding the given methods:
 - `getWebUrl()` - Mostly an URL to the repository with the source codes of the template implementation. Although it's not required to link source codes, we prioritize open-source and its collaborative possibilities.
 - `createProviders()` - This is the main method. It registers all providers responsible for manipulating the blueprint template to form the required output architecture.
 - `processBefore()` - Used to apply some `rules` to the output structure before it is delegated to providers.
+- `processAfter()` - Used to apply some `rules` to the output structure after it is processed by providers.
 
-### 2. Feature Provider
+### 2. FeatureProvider
 
 Feature providers are used to group different implementations of the same functionality by different vendors.
 
@@ -141,7 +150,7 @@ Examples:
 In both scenarios, you can use either one or multiple services (`processors`). Depending on the scenario, you will get all the required technical solutions to either log events into multiple systems using one common method or deploy artifacts into several destinations using one generated pipeline.
 
 :::tip[&nbsp;]
-Feature Provider is responsible to group multiple similar services, present them to the user, and generate all required artifacts, making it possible to operate with the services as one.
+FeatureProvider is responsible to group multiple similar services, present them to the user, and generate all required artifacts, making it possible to operate with the services as one.
 :::
 
 A typical feature provider is an implementation of the `BaseFeatureProvider` class.
@@ -171,7 +180,7 @@ Each implementation is responsible for overriding the given methods:
 - `getType` - Clarifies the type of the provider for a better understanding of its purpose.
 - `createProcessors` - Registers all `feature processors` of the given provider.
 
-### 3. Feature Processor
+### 3. FeatureProcessor
 
 The `Feature Processor` is responsible for the inclusion or exclusion of the feature it implements in the generated template.
 A `feature` is any atomic integration, technical solution, or business flow that can be added to a layer during its configuration in `Kotli`.
@@ -226,13 +235,9 @@ Each implementation is responsible for overriding the given methods:
 - `doApply` - When the feature is selected by the user, this method is used to apply some `rules` to the files affected by the feature in the blueprint template. It is not required that such files exist in the original template.
 - `doRemove` - When the feature is not selected by the user, this method will be called to `cleanup` the template from any changes specific to the feature only.
 
-### 4. File Rule
+### 4. FileRule
 
-Any rule to be applied to a file from the blueprint template during the generation of the output structure.
-
-:::info[&nbsp;]
-It is not required that file exists in the original template.
-:::
+Any rule to be applied to files from the blueprint template during the generation of the output structure.
 
 A typical rule is an implementation of the `FileRule` class.
 
@@ -258,15 +263,42 @@ class CleanupMarkedLine(
 Each file rule requires implementing only one method, `doApply`. This method is called during the final stage of the generation phase.
 
 :::tip[&nbsp;]
-**File Rule** is not bound to a file it modifies.
+- **FileRule** is not bound to files it modifies.
+- It is not required that files exist in the original template.
+- It is possible to implement any rule with any underlying template engine to process the input files.
+- The engine allows applying different rules to the same files. In such cases, each subsequent rule will operate with the modified version of the file. 
 :::
+
+### 5. TemplateContext
+
+**TemplateProcessor** does not directly manipulate the output structure. Instead, it creates rules to be applied during the preparation phase.
+
+:::tip[&nbsp;]
+**TemplateContext** serves to accumulate the rules to be applied to the blueprint template during the generation phase.
+:::
+
+```kotlin
+...
+state.onApplyRules("*AnalyticsSource*", RemoveFile())
+...
+state.onApplyRules("app/src/main/kotlin/app/datasource/analytics/firebase", RemoveFile())
+...
+state.onApplyRules("app/build.gradle", CleanupMarkedLine("{baselineprofile}"), CleanupMarkedBlock("{baselineprofile-config}"))
+...
+```
+
+Each **TemplateProcessor** and any subsequent **FeatureProcessor** is responsible for applying rules to the passed context by calling the method onApplyRules.
+This method accepts two parameters:
+
+- `contextPath` - The path to the file (or files) relative to the root folder of the blueprint template.
+- `rules` - The list of rules to be applied to the files found by the provided `contextPath`.
 
 :::info[&nbsp;]
-It is possible to implement any rule with any underlying template engine to process the input file.
-:::
-
-:::warning[&nbsp;]
-The engine allows applying different rules to the same file. In such cases, each subsequent rule will operate with the modified version of the file.
+The parameter `contextPath` can be defined as a mask to apply the given rules to multiple files.
+If it contains wildcard characters such as `*` or `?`, it is considered a mask.
+Examples:
+- `*Source*` - selects any file from the template that has `Source` in the middle.
+- `*Source??` - selects any file from the template that has `Source` in the middle and ends with two additional symbols.
 :::
 
 ## Examples

@@ -13,10 +13,10 @@ The project is driven by the following principals:
 The architecture of any product represents a compromise between quality and the effort required to achieve it. Depending on the available resources (time, money, people, experience), the project can be more resistant to erosion or less so.
 
 :::tip[&nbsp;]
-**Kotli** leverages the best software development practices to generate an initial project structure of any complexity while prioritizing simplicity and efficiency in further development and project support phases. As a result, at the beginning of the development, you have ready-to-use project structures and workflows with no cost.
+**Kotli** leverages the best software development practices to generate an initial project structure of any complexity while prioritizing simplicity and efficiency in further development and project support phases. As a result, at the beginning of the development, you have ready-to-use project architecture and workflows with no cost.
 :::
 
-## Write less, automate more
+## Write less, reuse more
 
 When starting a project from scratch, typical steps involve:
 1. designing the product's architecture
@@ -27,11 +27,11 @@ When starting a project from scratch, typical steps involve:
 
 :::tip[&nbsp;]
 Kotli aims to streamline this process by generating code based on the planned architecture.
-The less code is written, the fewer issues it has... but it is not certain.
+The less code is written, the fewer issues it has… but it is not certain.
 :::
 
 :::info[&nbsp;]
-There's also potential for training an AI to auto-generate code for specific business situations.
+There's also the possibility of training an AI to auto-generate code for specific business situations.
 :::
 
 ## Learn while coding
@@ -44,7 +44,7 @@ In product development, teams typically consist of specialists collaborating: De
 
 ## Kotlin first
 
-Kotlin is designed to be multi-platform. Moreover, it generates native code for the target platform. You can create backend services, Android and iOS apps, desktop and web solutions using almost the same code base. And it is easy to learn... but:
+Kotlin is designed to be multi-platform. Moreover, it generates native code for the target platform. You can create backend services, Android and iOS apps, desktop and web solutions using almost the same code base. And it is easy to learn… but:
 
 - Having the same code base is not always advantageous when developing complex products with numerous specialists or when utilizing development lifecycle practices specific for each layer (CI/CD, automated testing, deployment, etc.).
 - While it is easy to learn, prior knowledge of Java is beneficial.
