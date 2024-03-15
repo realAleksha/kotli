@@ -287,7 +287,7 @@ state.onApplyRules("app/build.gradle", CleanupMarkedLine("{baselineprofile}"), C
 ...
 ```
 
-Each **TemplateProcessor** and any subsequent **FeatureProcessor** is responsible for applying rules to the passed context by calling the method onApplyRules.
+Each **TemplateProcessor** and any subsequent **FeatureProcessor** is responsible for applying rules to the passed context by calling the method `onApplyRules`.
 This method accepts two parameters:
 
 - `contextPath` - The path to the file (or files) relative to the root folder of the blueprint template.
