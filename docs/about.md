@@ -30,10 +30,6 @@ Kotli aims to streamline this process by generating code based on the planned ar
 The less code is written, the fewer issues it has… but it is not certain.
 :::
 
-:::info[&nbsp;]
-There's also the possibility of training an AI to auto-generate code for specific business situations.
-:::
-
 ## Learn while coding
 
 In product development, teams typically consist of specialists collaborating: DevOps engineers, frontend and backend developers, manual and automated testers, architects, etc. It’s advantageous when the team truly includes all these specialists, or at least some possess experience across various areas, ensuring coverage of all necessary technical skills to maintain the product’s quality during implementation.
@@ -49,8 +45,7 @@ Kotlin is designed to be multi-platform. Moreover, it generates native code for 
 - Having the same code base is not always advantageous when developing complex products with numerous specialists or when utilizing development lifecycle practices specific for each layer (CI/CD, automated testing, deployment, etc.).
 - While it is easy to learn, prior knowledge of Java is beneficial.
 - It can be challenging to use when building complex or production-ready systems.
-
-Despite Kotlin being pretty awesome, you have to know how to cook it.
+- Despite Kotlin being pretty awesome, you have to know how to cook it.
 
 :::tip[&nbsp;]
 **Kotli** provides out-of-the-box project templates with a set of ready-made practical solutions that can be customized to meet any project needs, considering both functional and non-functional product requirements.
