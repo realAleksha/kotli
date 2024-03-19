@@ -6,7 +6,7 @@ title: How to use
 **Kotli** can be utilized in various ways:
 
 ## Web Portal
-[Browser-based solution](https://kotlitecture.com) allows users to build the desired project architecture and download the resulting source codes.
+[Browser-based solution](https://kotlitecture.com/project) allows users to build the desired project architecture and download the resulting source codes.
 It is extremely user-friendly and does not require deep technical expertise.
 
 :::note[&nbsp;]
