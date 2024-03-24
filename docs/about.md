@@ -4,7 +4,7 @@ sidebar_position: 1
 title: About
 ---
 
-**Kotli** helps to prepare the architecture of your product and generate all required production-ready artifacts based on it (layers, source codes, solution templates, documentation, CI/CD automation, etc).
+[Kotli](https://kotlitecture.com) helps to prepare the architecture of your product and generate all required production-ready artifacts based on it (layers, source codes, solution templates, documentation, CI/CD automation, etc).
 
 The project is driven by the following principals:
 
