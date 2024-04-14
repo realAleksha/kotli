@@ -22,13 +22,13 @@ Then add **Kotli** to the module where you’d like to use it.
 ```kotlin
 dependencies {
     // engine (required)
-    implementation("com.kotlitecture.kotli:kotli-engine:0.1.4")
+    implementation("com.kotlitecture.kotli:kotli-engine:0.3.9")
     
     // android application template (optional)
-    implementation("com.kotlitecture.kotli:template-android-compose:0.0.18")
+    implementation("com.kotlitecture.kotli:template-android-compose:0.2.5")
     
     // backend spring boot template (optional)
-    implementation("com.kotlitecture.kotli:template-backend-spring-boot:0.0.22")
+    implementation("com.kotlitecture.kotli:template-backend-spring-boot:0.0.28")
 }
 ```
 
