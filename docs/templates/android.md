@@ -24,7 +24,7 @@ In its current implementation, the template is based on the following pre-config
 This selection can be modified and made customizable once any alternative solutions are integrated into the template.
 ```
 
-All other functional and non-functional features can be configured via [Kotlin](https://kotlitecture.com).
+All other functional and non-functional features can be configured via [Kotli](https://kotlitecture.com).
 
 
 
