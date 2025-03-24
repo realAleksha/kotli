@@ -13,15 +13,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://kotlitecture.github.io',
+  url: 'https://realaleksha.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/kotli',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'kotlitecture', // Usually your GitHub org/user name.
-  projectName: 'kotlitecture.github.io', // Usually your repo name.
+  organizationName: 'Aleksha', // Usually your GitHub org/user name.
+  projectName: 'kotli', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -76,7 +76,7 @@ const config = {
           // },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/kotlitecture',
+            href: 'https://github.com/realAleksha/kotli-engine',
             label: 'GitHub',
             position: 'right',
           },

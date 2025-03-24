@@ -96,7 +96,7 @@ class AndroidComposeTemplateProcessor : BaseTemplateProcessor() {
 
     override fun getId(): String = "template-android-compose"
     override fun getType(): LayerType = LayerTypes.Android
-    override fun getWebUrl(): String = "https://github.com/kotlitecture/template-android-compose"
+    override fun getWebUrl(): String = "https://github.com/realAleksha/template-android-compose"
 
     override fun createProviders(): List<FeatureProvider> = listOf(
         L10NProvider(),
@@ -305,5 +305,4 @@ Examples:
 
 It is recommended to check how existing templates look for a better understanding of the engine concept. Here are some examples:
 
-1. Android Compose Application - https://github.com/kotlitecture/template-android-compose
-2. Spring Boot Application - https://github.com/kotlitecture/template-backend-spring-boot 
+1. Compose Multiplatform Application - https://github.com/realAleksha/template-multiplatform-compose
